@@ -28,12 +28,11 @@ exports.createBootcamp = (req, res, next) => {
 exports.updateBootcamp = (req, res, next) => {
   res
     .status(200)
-    .json({ success: true, msg: `Update a bootcamp ${req.params.id}` });
+    .json({ success: true, msg: `Update a bootcamp ${req.params.id} ` });
 };
-
 // @desc        Delete a BootCamps
 // @route       Delete /api/v1/bootcamps/:id
-// @access      Private
+// @access      Privatee
 exports.deleteBootcamp = (req, res, next) => {
   res
     .status(200)
