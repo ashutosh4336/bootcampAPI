@@ -64,8 +64,11 @@ const BootcampSchema = new mongoose.Schema({
       'UI/UX',
       'Data Science',
       'Business',
-      'Other',
-      'CyberSecurity'
+      'CyberSecurity',
+      'IOT',
+      'Machine Learning',
+      'AI',
+      'Other'
     ]
   },
   averageRating: {
