@@ -6,6 +6,9 @@ const colors = require('colors');
 // load env variables
 dotenv.config({ path: './config/config.env' });
 
+// Load Middleware
+const errorHandler = require('./middleware/error');
+
 // MongoDB Connection
 const connectDB = require('./config/db');
 connectDB();
@@ -25,6 +28,8 @@ if (process.env.NODE_ENV === 'development') {
 
 // Mount routers
 app.use('/api/v1/bootcamps', bootcamps);
+
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5003;
 
